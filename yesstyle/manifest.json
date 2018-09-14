@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "yesstyle",
+  "version": "1.0",
+  "icons": {
+    "24": "icons/pc.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.yesstyle.com/en*"
+      ],
+      "js": ["jquery-3.1.1.min.js", "All.js"]
+    }
+  ]
+
+}

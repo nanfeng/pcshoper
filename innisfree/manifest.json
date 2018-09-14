@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "innisfree",
+  "version": "1.0",
+  "icons": {
+    "24": "icons/pc.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.innisfree.com/hk/en/product/productView.do*", 
+        "http://www.innisfree.com/in/en/product/productView.do*", 
+        "http://www.innisfree.com/my/en/product/productView.do*",
+        "http://www.innisfree.com/sg/en/product/productView.do*",
+        "http://www.innisfree.com/th/th/product/productView.do*",
+        "http://www.innisfree.com/id/en/product/productView.do*",
+        "http://www.innisfree.com/tw/en/product/productView.do*"
+      ],
+      "js": ["jquery-3.1.1.min.js", "All.js"]
+    }
+  ]
+
+}
