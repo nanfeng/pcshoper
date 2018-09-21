@@ -21,7 +21,7 @@
                 p_html += 'data.name = jQuery("h1[itemprop=' + '\'name' + '\']").text().trim();';
                 p_html += 'data.ingredient = "";';
                 p_html += 'data.Directions = "";';
-                p_html += 'jQuery(".drop-box").children().each(function () {var str = jQuery(this).text().trim();if (str.startsWith("Directions")) {    data.Directions = jQuery(this).next().text();}if (str.startsWith("Ingredients")) {  data.ingredient = jQuery(this).next()..html().replace(/\<br\>/g, ",");}});';
+                p_html += 'jQuery(".drop-box").children().each(function () {var str = jQuery(this).text().trim();if (str.startsWith("Directions")) {    data.Directions = jQuery(this).next().text();}if (str.startsWith("Ingredients")) {  data.ingredient = jQuery(this).next().html().replace(/\<br\>/g, ",");}});';
                 p_html += ' jQuery("#ids").val(JSON.stringify(data));';
                 p_html += ' jQuery("#ids").select();';
                 p_html += ' document.execCommand("copy");';
