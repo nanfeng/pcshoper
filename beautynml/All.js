@@ -16,9 +16,9 @@ if (jQuery("#funa") || jQuery("#funa").length <= 0) {
     p_html += 'data.desc = "";';
     p_html += 'data.claim = "";';
     p_html += 'var claim = jQuery("#what-to-love p").eq(0).text().trim().split("\\n");';
-    p_html += 'for(var i=0; i<claim.length; i++){if(claim[i].startsWith("CLAIM TO FAME: ")){data.desc = claim[i].substr("CLAIM TO FAME: ".length);};if(claim[i].startsWith("FAST FACTS: ")){data.claim = claim[i].substr("FAST FACTS: ".length);};if(claim[i].startsWith("PERFECT FOR: ")){data.claim += ".\\n" + claim[i].substr("PERFECT FOR: ".length);};};';
+    p_html += 'for(var i=0; i<claim.length; i++){if(claim[i].startsWith("CLAIM TO FAME: ")){data.desc = claim[i].substr("CLAIM TO FAME: ".length);};if(claim[i].startsWith("FAST FACTS: ")){data.claim = claim[i].substr("FAST FACTS: ".length);};if(claim[i].startsWith("PERFECT FOR: ")){data.claim += ".\\n" + claim[i];};};';
     p_html += 'data.brand = jQuery(".product-page__heading .brand").text();';
-    p_html += 'data.name = jQuery(".product-page__heading h1").text().trim().replace(/ \\(.*\\)/, "");';
+    p_html += 'data.name = data.brand + " " + jQuery(".product-page__heading h1").text().trim().replace(/ \\(.*\\)/, "");';
     p_html += 'data.Directions = jQuery("#how-to-use").text().trim();';
     p_html += 'jQuery("#ids").val(JSON.stringify(data));';
     p_html += 'jQuery("#ids").select();';
