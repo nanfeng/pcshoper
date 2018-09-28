@@ -1,5 +1,5 @@
     var path = window.location.pathname.split('/')
-    if (path.length>3 && 'p' == path[2] && ("http://www.watsons.co.th" == window.location.origin || "https://www.watsons.co.th" == window.location.origin))
+    if (path.length>3 && 'p' == path[2] && ("http://www.watsons.co.th" == window.location.origin || "https://www.watsons.co.th" == window.location.origin) ||  "https://www.watsons.com.my" == window.location.origin)
     {
         // plugin positioning button
         if (jQuery("#funa") || jQuery("#funa").length <= 0) {
@@ -18,7 +18,8 @@
                 p_html += 'data.desc = jQuery(".drop-box").children().first().text().trim();';
                 p_html += 'data.claim = "";';
                 p_html += 'data.brand = jQuery("[itemprop=' + '\'brand' + '\']").text().trim();';
-                p_html += 'data.name = jQuery("h1[itemprop=' + '\'name' + '\']").text().trim();';
+                p_html += 'data.name = jQuery("h1[itemprop=' + '\'name' + '\']").text().trim().replace(volume, "");';
+                p_html += 'if(!data.name.toLowerCase().startsWith(data.brand.toLowerCase())){data.name = data.brand + " " + data.name};';
                 p_html += 'data.ingredient = "";';
                 p_html += 'data.Directions = "";';
                 p_html += 'jQuery(".drop-box").children().each(function () {var str = jQuery(this).text().trim();if (str.startsWith("Directions")) {    data.Directions = jQuery(this).next().text();}if (str.startsWith("Ingredients")) {  data.ingredient = jQuery(this).next().html().replace(/\<br\>/g, ",");}});';
