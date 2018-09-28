@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "hermo",
+  "version": "1.0",
+  "icons": {
+    "24": "icons/pc.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.hermo.my/mall/*",
+        "https://www.hermo.sg/mall/*"
+      ],
+      "js": ["jquery-3.1.1.min.js", "All.js"]
+    }
+  ]
+
+}

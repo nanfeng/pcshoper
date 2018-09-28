@@ -41,9 +41,13 @@ if (window.location.pathname.startsWith("/en/product"))
             p_html += 'window.getSelection().addRange(range);';
             p_html += 'document.execCommand("copy");';
             p_html += '};'
+            p_html += 'function openImg(){';
+            p_html += '  window.open(jQuery(\'[itemprop="image"]\').attr("src"));'
+            p_html += '};'
             p_html += '</script>';
             p_html += '<textarea rows="3"  id="ids" style="with:30px;" onclick="jQuery(this).select();"></textarea><br/>'
             p_html += '<input id="funa" value="function A" type="button" style="background-color: green;height: 50px;" onclick="sephB();">';
+            p_html += '<input value="img" type="button" onclick="openImg();" style="background-color: green;height: 50px;">';
             p_html += '</div>';
 
         jQuery("#docking").prepend(p_html);
