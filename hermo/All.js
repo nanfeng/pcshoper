@@ -22,8 +22,8 @@ if (window.location.pathname.startsWith("/mall"))
             p_html += 'data.price = res.price.selling;';
             p_html += 'data.desc = "";';
             p_html += 'data.claim = jQuery(res.description).text().trim();';
-            p_html += 'data.brand = res.brand.name;';
-            p_html += 'data.name = res.name.replace(/\\[|\\]/g, "");';
+            p_html += 'data.brand = res.brand.name.replace(/\'/g, "");';
+            p_html += 'data.name = res.name.replace(/\\[|\\]/g, "").replace(/\'|#/g, "");';
             p_html += 'data.ingredient = ingredient;';
             p_html += 'data.Directions = jQuery(res.usage).text();';
             p_html += 'jQuery("#ids").val(JSON.stringify(data));';
