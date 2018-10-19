@@ -6,15 +6,17 @@ var superagent = require('superagent'); //这三个外部依赖不要忘记npm i
 var cheerio = require('cheerio');
 var eventproxy = require('eventproxy');
 
-var topicUrls = [
-
-
-
-'https://www.sephora.ph/products/guerlain-rouge-g-lips-refill/v/n214',
-
-
-
-];
+var topicUrlStr = `
+https://www.sephora.ph/products/guerlain-rouge-g-lips-refill/v/n214
+`;
+var topicUrls = [];
+var topicUrlsTmp = topicUrlStr.split("\n");
+for (var i = 0; i<topicUrlsTmp.length; i++) {
+	if (topicUrlsTmp[i].length == 0) {
+		continue;
+	}
+    topicUrls.push(topicUrlsTmp[i]);
+};
 
 //第一步：得到一个 eventproxy 的实例
 var ep = new eventproxy();
