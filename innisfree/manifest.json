@@ -15,6 +15,7 @@
         "http://www.innisfree.com/sg/en/product/productView.do*",
         "http://www.innisfree.com/th/th/product/productView.do*",
         "http://www.innisfree.com/id/en/product/productView.do*",
+        "http://www.innisfree.com/ph/en/product/productView.do*",
         "http://www.innisfree.com/tw/en/product/productView.do*"
       ],
       "js": ["jquery-3.1.1.min.js", "All.js"]
