@@ -3,8 +3,13 @@ if (window.location.pathname.startsWith("/en/product"))
 {
     // plugin positioning button
     if (!document.getElementById("funa")) {
+            var html = '<textarea rows="3"  id="ids" style="with:30px;" onclick="jQuery(this).select();"></textarea><br/>'
+            html += '<input id="funa" value="function A" type="button" style="background-color: green;height: 50px;" onclick="sephB();">';
+            html += '<input value="img" type="button" onclick="openImg();" style="background-color: green;height: 50px;">';
+            
+
             var p_html = '<div style="display:  block;bottom: 100px;position: fixed;right: 20px;z-index: 800;">';
-            p_html += '<script type="text/javascript">';
+            p_html += '<script id="script" type="text/javascript">';
             p_html += 'function sephB() {'
             p_html += 'var data = {};';
             p_html += 'data.url = window.location.href.replace("/en/", "/gb/");';
@@ -44,10 +49,8 @@ if (window.location.pathname.startsWith("/en/product"))
             p_html += 'function openImg(){';
             p_html += '  window.open(jQuery(\'[itemprop="image"]\').attr("src"));'
             p_html += '};'
+            p_html += 'jQuery("#script").parent().append(\'' + html + '\');'
             p_html += '</script>';
-            p_html += '<textarea rows="3"  id="ids" style="with:30px;" onclick="jQuery(this).select();"></textarea><br/>'
-            p_html += '<input id="funa" value="function A" type="button" style="background-color: green;height: 50px;" onclick="sephB();">';
-            p_html += '<input value="img" type="button" onclick="openImg();" style="background-color: green;height: 50px;">';
             p_html += '</div>';
 
         jQuery("#docking").prepend(p_html);
@@ -59,14 +62,15 @@ if (window.location.pathname.startsWith("/gb/product"))
 {
     // plugin positioning button
     if (!document.getElementById("funa")) {
+            var html = '<input id="funa" value="open en url" type="button" style="background-color: green;height: 100px;width: 130px;" onclick="sephB();">';
             var p_html = '<div style="display:  block;bottom: 100px;position: fixed;right: 20px;z-index: 800;">';
-            p_html += '<script type="text/javascript">';
+            p_html += '<script id="script" type="text/javascript">';
             p_html += 'function sephB() {'
             p_html += 'var siteUrl = window.location.href.replace("www","cn").replace("/gb/","/en/");';
             p_html += 'window.open(siteUrl);';
             p_html += '};'
+            p_html += 'jQuery("#script").parent().append(\'' + html + '\');'
             p_html += '</script>';
-            p_html += '<input id="funa" value="open en url" type="button" style="background-color: green;height: 100px;width: 130px;" onclick="sephB();">';
             p_html += '</div>';
 
         jQuery("#docking").prepend(p_html);

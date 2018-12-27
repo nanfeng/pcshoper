@@ -10,7 +10,7 @@ var topicUrls = [
 
 
 
-'https://www.sephora.ph/products/guerlain-rouge-g-lips-refill/v/n214',
+'https://www.sephora.ph/products/urban-decay-naked-skin-weightless-ultra-definition-liquid-makeup/v/0-5',
 
 
 
