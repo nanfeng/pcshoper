@@ -1,0 +1,24 @@
+.wgt-exp-share {
+    display: none;
+    width: 50px;
+    height: 159px;
+    z-index: 9999;
+    position: absolute;
+}
+.wrp-exp-share a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 3px;
+    text-decoration: none;
+    outline: 0;
+}
+a:link, a:visited {
+    color: #2d64b3;
+    text-decoration: none;
+}
+a:visited {
+    color: #2d64b3;
+    text-decoration: none;
+}
